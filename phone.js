@@ -1,6 +1,6 @@
 ﻿/* Phone
  * When included with a project, a jQuery plugin ("phone") is enabled.
- * Copyright © 2012 Clay Miller (clay@auburn.edu)
+ * Copyright © 2013 Clay Miller (clay@smockle.com)
  */
 
 /* Phone
