@@ -6,13 +6,20 @@
 /* Phone
  * Limits characters entered in a text field to those used in phone numbers.
  *
- * Usage: $(elem).phone();
+ * Usage: 
+ * $(elem).phone(); // maxlength default value is 14
+ * $(elem).phone({ maxlength: "7" });
  */
 (function ($) {
-    $.fn.phone = function () {
-        $(this).attr("maxlength", "14");
-        $(this).keypress(function (e) { if (!e) e = window.event; return is_number(e); });
-		return $(this)
+    $.fn.phone = function ( options ) {
+        // set default options
+         var settings = $.extend({
+            maxlength: "14",
+        }, options );
+        
+        this.attr("maxlength", settings.maxlength);
+        this.keypress(function (e) { if (!e) e = window.event; return is_number(e); });
+		return this;
 	}
 }) (jQuery);
 
